@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylecheet" href="./style.css">
+  <title>Weather App </title>
+</head>
+<body>
+  <div class="container w-100">
+    <div class="row m-5">
+      <!-- class="was-validated" -->
+      <form action="" method="POST" class="w-100 was-validated">
+        <div class="form-group">
+          <label for="zipCode">zipCode:</label>
+          <input 
+            type="text" 
+            class="form-control"
+            id="zipCode" 
+            placeholder="Enter Zip Code" 
+            name="zipCode" 
+            required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+          <label for="status">Feelings:</label>
+            <textarea 
+              class="form-control" 
+              rows="3" 
+              id="feelings" 
+              name="feelings"
+              placeholder="Enter Your Feelings" 
+              required
+              ></textarea>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+       
+        <button 
+          type="button" 
+          class="btn btn-primary"
+          onclick="main()">Post </button>
+      </form>
+    </div>
+    <div class="row m-5">
+      <table class="table table-striped">
+        <thead>
+          <tr class="alert-info">
+            <th>Id</th>
+            <th>Data</th>
+            <th>Tempreture Dgree F</th>
+            <th>Tempreture Dgree Cْ </th>
+            <th>Feelings</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <!-- <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr> -->
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
