@@ -32,6 +32,8 @@ app.post('/', (req, res) => {
   projectData['feelings'] = req.body.feelings;
 
   console.log(projectData)
+
+  res.send(projectData);
 })
 
 

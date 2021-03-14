@@ -1,5 +1,5 @@
 /* Global Variables */
-const apiKey = '&appid=e19827c0200986b7dd04b02f69152e81';
+const apiKey = '&appid=e19827c0200986b7dd04b02f69152e81&units=imperial';
 const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 const ROUTS = {
   post: '/',
@@ -53,20 +53,23 @@ const getFromLocalServer = async () => {
 const renderElement = (data) =>{
   const Tbody = document.getElementById('tbody');
   const tempCels =((data.temp-32) * 5/9);
+  const tempKel =tempCels + 273.15;
   Tbody.insertAdjacentHTML('beforeend',`
-        <tr>
+        <tr class="text-center">
           <td>${data.id}</td>
           <td>${data.date}</td>
           <td>${data.temp}</td>
           <td>${tempCels.toFixed(2)}</td>
+          <td>${tempKel.toFixed(2)}</td>
           <td>${data.feelings}</td>
         </tr>
   `)
 }
 
 // Main Function 
-const main = () => {
-    const zipCode = document.getElementById('zipCode').value;
+const generateBtn = document.getElementById('generate');
+generateBtn.addEventListener('click', () => {
+  const zipCode = document.getElementById('zipCode').value;
     const feelings = document.getElementById('feelings').value;
     //submit validation 
   (zipCode && feelings !=='') ? 
@@ -79,6 +82,6 @@ const main = () => {
       });
       getFromLocalServer();
     })
-  :  alert('please insert Zipcode and Your Status !!')
+    :  alert('please insert Zipcode and Your Status !!')
 
-}
+})

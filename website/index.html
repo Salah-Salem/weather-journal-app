@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylecheet" href="./style.css">
+  <link rel="stylecheet" href="./style.css" type="text/css">
   <title>Weather App </title>
 </head>
 <body>
@@ -42,34 +42,29 @@
        
         <button 
           type="button" 
+          id='generate'
           class="btn btn-primary"
-          onclick="main()">Post </button>
+          >Post </button>
       </form>
     </div>
     <div class="row m-5">
       <table class="table table-striped">
         <thead>
-          <tr class="alert-info">
+          <tr class="alert-info text-center">
             <th>Id</th>
             <th>Data</th>
-            <th>Tempreture Dgree F</th>
-            <th>Tempreture Dgree Cْ </th>
+            <th>Temp Dgree F</th>
+            <th>Temp Dgree Cْ </th>
+            <th>Temp Dgree K</th>
             <th>Feelings</th>
           </tr>
         </thead>
         <tbody id="tbody">
-          <!-- <tr>
-            <td>1</td>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr> -->
-         
+
         </tbody>
       </table>
     </div>
   </div>
-
   <script src="./app.js"></script>
   <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
